@@ -1,0 +1,6 @@
+Bundle 'xolox/vim-easytags'
+Bundle 'xolox/vim-misc'
+Bundle 'tikhomirov/vim-glsl'
+Bundle 'beyondmarc/opengl.vim'
+Bundle 'peterhoeg/vim-qml'
+Bundle 'vim-airline/vim-airline-themes'

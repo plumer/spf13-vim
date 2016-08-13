@@ -1,0 +1,21 @@
+if has('gui_running')
+    set macligatures
+    set linespace=3
+endif
+set gfn=Fira\ Code:h12
+set foldmethod=indent
+
+let g:solarized_contrast="high"
+
+" vim-easytags
+set tags=./tags;
+let g:easytags_dynamic_files = 1
+let g:easytags_include_members = 1
+
+"highlight link cMemberTag Underlined
+highlight cFunctionTag guifg=#8cc518 ctermfg=47
+highlight cMemberTag guifg=#c2d6d7 ctermfg=47
+"highlight cFunctionTag gui=underline guifg=Function
+
+"highlight link 'GLuint' Type
+hi def link GLType Type
