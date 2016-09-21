@@ -1,8 +1,10 @@
-if has('gui_running')
+if has('gui_running') && OSX()
     set macligatures
     set linespace=3
+    set gfn=Fira\ Code:h12
+elseif has('gui_running') && LINUX()
+    set gfn=Noto\ Mono\ 10
 endif
-set gfn=Fira\ Code:h12
 set foldmethod=indent
 
 let g:solarized_contrast="high"
