@@ -7,7 +7,10 @@ elseif has('gui_running') && LINUX()
 endif
 set foldmethod=indent
 
-let g:solarized_contrast="high"
+"let g:solarized_contrast="high"
+set t_Co=256
+set background=dark
+colorscheme PaperColor
 
 " vim-easytags
 set tags=./tags;
