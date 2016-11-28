@@ -3,7 +3,11 @@ if has('gui_running') && OSX()
     set linespace=3
     set gfn=Fira\ Code:h12
 elseif has('gui_running') && LINUX()
-    set gfn=Ubuntu\ Mono\ 12
+    set linespace=2
+    set guioptions-=m
+    "set gfn=TheSans\ Mono\ 10.5
+    set gfn=mononoki\ 11
+    set lazyredraw
 endif
 set foldmethod=indent
 
@@ -25,3 +29,4 @@ highlight cMemberTag guifg=#c2d6d7 ctermfg=47
 
 "highlight link 'GLuint' Type
 hi def link GLType Type
+hi glFunction gui=italic guifg=#4fc3f7
