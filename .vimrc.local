@@ -7,19 +7,20 @@ if has('gui_running') && OSX()
     set foldmethod=indent
 endif
 
-"let g:solarized_contrast="high"
+let g:solarized_contrast="high"
 set t_Co=256
 set background=dark
-colorscheme PaperColor
+colorscheme solarized
+"colorscheme PaperColor
 
 " vim-easytags
 set tags=./tags;
 let g:easytags_dynamic_files = 1
 let g:easytags_include_members = 1
-let g:airline_theme='papercolor'
+let g:airline_theme='solarized'
 
 "highlight link cMemberTag Underlined
-highlight cFunctionTag guifg=#81d4fa ctermfg=47
+highlight cFunctionTag guifg=#27a2fe ctermfg=47
 highlight cMemberTag guifg=#c2d6d7 gui=underline ctermfg=47
 "highlight cFunctionTag gui=underline guifg=Function
 
@@ -35,3 +36,9 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 let g:cpp_class_scope_highlight=1
 let g:cpp_concepts_highlight=1
+
+if has("autocmd")
+    if v:version > 701
+        autocmd Syntax * call matchadd('Todo', '\W\zs\(TODO\|FIXME\|CHANGED\|XXX\|BUG\|DONE\|NOTE\)')
+    endif
+endif
