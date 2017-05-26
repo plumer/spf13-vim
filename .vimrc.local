@@ -1,36 +1,26 @@
 if has('gui_running') && OSX()
     "set macligatures
-    "set linespace=1
-    "set gfn=Iosevka\ Light:h13
-    set gfn=TheSans\ Mono:h12
-    set linespace=5
+    set gfn=TheSansMono:h12
+    set linespace=1
     set foldmethod=indent
 endif
 
 let g:solarized_contrast="high"
 set t_Co=256
 set background=dark
-colorscheme solarized
-"colorscheme PaperColor
+colorscheme PaperColor
+"colorscheme solarized
 
-" vim-easytags
 set tags=./tags;
-let g:easytags_dynamic_files = 1
-let g:easytags_include_members = 1
-let g:airline_theme='solarized'
+let g:airline_theme='papercolor'
 
-"highlight link cMemberTag Underlined
-highlight cFunctionTag guifg=#27a2fe ctermfg=47
-highlight cMemberTag guifg=#c2d6d7 gui=underline ctermfg=47
-"highlight cFunctionTag gui=underline guifg=Function
 
 "highlight link 'GLuint' Type
 hi def link GLType Type
-hi glFunction gui=italic guifg=#4fc3f7
+
 
 let b:beancount_root = '~/github/financial-sheet'
 autocmd FileType beancount inoremap . .<C-O>:AlignCommodity<CR>
-"autocmd FileType beancount inoremap <Tab> <c-x><c-o>
 
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 

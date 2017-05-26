@@ -1,9 +1,10 @@
-Bundle 'xolox/vim-easytags'
-Bundle 'xolox/vim-misc'
 Bundle 'tikhomirov/vim-glsl'
 Bundle 'beyondmarc/opengl.vim'
 Bundle 'peterhoeg/vim-qml'
-Bundle 'vim-airline/vim-airline-themes'
 Bundle 'NLKNguyen/papercolor-theme'
 Bundle 'nathangrigg/vim-beancount'
 Bundle 'octol/vim-cpp-enhanced-highlight'
+Bundle 'arkbriar/vim-qmake'
+
+Bundle 'jeaye/color_coded'
+Bundle 'rdnetto/YCM-Generator'
