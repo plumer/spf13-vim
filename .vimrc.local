@@ -15,12 +15,20 @@ set tags=./tags;
 let g:airline_theme='papercolor'
 
 
+let b:beancount_root = '~/github/financial-sheet'
+autocmd FileType beancount inoremap . .<C-O>:AlignCommodity<CR>
+"highlight link cMemberTag Underlined
+highlight cFunctionTag guifg=#81d4fa ctermfg=47
+highlight cMemberTag guifg=#c2d6d7 gui=underline ctermfg=47
+"highlight cFunctionTag gui=underline guifg=Function
+
 "highlight link 'GLuint' Type
 hi def link GLType Type
-
+hi glFunction gui=italic guifg=#4fc3f7
 
 let b:beancount_root = '~/github/financial-sheet'
 autocmd FileType beancount inoremap . .<C-O>:AlignCommodity<CR>
+"autocmd FileType beancount inoremap <Tab> <c-x><c-o>
 
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
